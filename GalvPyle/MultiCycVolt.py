@@ -10,6 +10,8 @@ import matplotlib as mpl
 
 class MultiCV(object):
     def __init__(self, folder):
+        self.version = "05.11.2023"
+        self._change_log = ["05.11.2023: fixed cathodic/anodic vs. discharge/charge terminology for compatibility with CycVolt"]
         allfiles = glob.glob(os.path.join(folder, "*.mpt"))
         cv_files = [file for file in allfiles if "_CV_" in os.path.split(file)[-1]]
         self.data = {}
