@@ -38,8 +38,8 @@ class MultiCV(object):
             ax.plot([], [], color=plot_colors[ndata], label=scan_rate)
             for cycle in range(trace.n_cycles):
                 try:
-                    ax.plot(trace.discharge.voltage[cycle], trace.discharge.current[cycle], color=plot_colors[ndata], zorder=z_order)
-                    ax.plot(trace.charge.voltage[cycle], trace.charge.current[cycle], color=plot_colors[ndata], zorder=z_order)
+                    ax.plot(trace.cathodic.voltage[cycle], trace.cathodic.current[cycle], color=plot_colors[ndata], zorder=z_order)
+                    ax.plot(trace.anodic.voltage[cycle], trace.anodic.current[cycle], color=plot_colors[ndata], zorder=z_order)
                 except:
                     continue
         ax.legend(loc="center left", bbox_to_anchor=(1, 0.5))
